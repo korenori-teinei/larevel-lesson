@@ -5,36 +5,36 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 // page.52
-use Illuminate\Http\Response;
+// use Illuminate\Http\Response;
 
-class HelloController extends Controller
-{
-    public function index(Request $request, Response $response) {
+// class HelloController extends Controller
+// {
+//     public function index(Request $request, Response $response) {
 
-$html = <<<EOF
-<html>
-<head>
-<title>Hello/Index</title>
-<style>
-body {font-size:16pt; color:#999; }
-h1 { font-size:120pt; text-align:right; color:#fafafa;
-    maergin:-50px 0px -120px 0px; }
-</style>
-</head>
-<body>
-    <h1>Hello</h1>
-    <h3>Request</h3>
-    <pre>{$request}</pre>
-    <h3>Response</h3>
-    <pre>{$response}</pre>
-</body>
-</html>
-EOF;
+// $html = <<<EOF
+// <html>
+// <head>
+// <title>Hello/Index</title>
+// <style>
+// body {font-size:16pt; color:#999; }
+// h1 { font-size:120pt; text-align:right; color:#fafafa;
+//     margin:-50px 0px -120px 0px; }
+// </style>
+// </head>
+// <body>
+//     <h1>Hello</h1>
+//     <h3>Request</h3>
+//     <pre>{$request}</pre>
+//     <h3>Response</h3>
+//     <pre>{$response}</pre>
+// </body>
+// </html>
+// EOF;
 
-        $response->setContent($html);
-        return $response;
-    }
-}
+//         $response->setContent($html);
+//         return $response;
+//     }
+// }
 
 
 //初期設定
@@ -137,3 +137,17 @@ EOF;
 // EOF;
 //     }
 // }
+
+
+// page.62 blade
+class HelloController extends Controller
+{
+    public function index($id='zero') 
+{
+        $data = [
+            'msg'=>'これはコントローラから渡されたメッセージです。',
+            'id'=>$id
+        ];
+        return view('hello.index', $data);
+}
+};
