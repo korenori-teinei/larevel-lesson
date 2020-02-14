@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<?php //a
-=======
 <?php
->>>>>>> master
 
 namespace App\Http\Controllers;
 
