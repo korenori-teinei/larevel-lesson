@@ -64,10 +64,15 @@
 
 
 // page.53
-Route::get('hello/{id?}', 'HelloController@index');
+// Route::get('hello/{id?}', 'HelloController@index');
 
 
 // page.60 blade
 // Route::get('hello', function () {
 //     return view ('hello.index');
 // });
+
+
+// page.66
+Route::get('hello', 'HelloController@index');
+Route::post('hello', 'HelloController@post');

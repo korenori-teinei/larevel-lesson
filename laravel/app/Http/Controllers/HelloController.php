@@ -140,14 +140,116 @@ use Illuminate\Http\Request;
 
 
 // page.62 blade
+// class HelloController extends Controller
+// {
+//     public function index($id='zero') 
+// {
+//         $data = [
+//             'msg'=>'これはコントローラから渡されたメッセージです。',
+//             'id'=>$id
+//         ];
+//         return view('hello.index', $data);
+// }
+// };
+
+
+// page.65~ blade
+// class HelloController extends Controller
+// {
+//     public function index(Request $request) 
+// {
+//         $data = [
+//             'msg'=>'これはコントローラから渡されたメッセージです。',
+//             'id'=>$request->id
+//         ];
+//         return view('hello.index', $data);
+// }
+// };
+
+
+// page.68 blade
+// class HelloController extends Controller
+// {
+//     public function index() 
+// {
+//         $data = [
+//             'msg'=>'これはBladeを利用したサンプルです。',
+//         ];
+//         return view('hello.index', $data);
+// }
+// };
+
+
+// page.69
+// class HelloController extends Controller
+// {
+//     public function index() 
+//     {
+//         $data = [
+//             'msg'=>'お名前を入力してください。',
+//         ];
+//         return view('hello.index', $data);
+//     }
+//     public function post(Request $request) 
+//     {
+//         $msg = $request->msg;
+//         $data = [
+//             'msg'=>'こんにちは、' . $msg . 'さん！',
+//         ];
+//         return view('hello.index', $data);
+//     }
+// };
+
+
+// page.76 if
+// class HelloController extends Controller
+// {
+//     public function index() 
+//     {
+//         return view('hello.index', ['msg'=>'']);
+//     }
+//     public function post(Request $request) 
+//     {
+//         return view('hello.index', ['msg'=>$request->msg]);
+//     }
+// };
+
+
+// paage.77 isset
+// class HelloController extends Controller
+// {
+//     public function index() 
+//     {
+//         return view('hello.index');
+//     }
+//     public function post(Request $request) 
+//     {
+//         return view('hello.index', ['msg'=>$request->msg]);
+//     }
+// };
+
+
+// page.80 ループ処理
+// class HelloController extends Controller
+// {
+//     public function index() 
+//     {
+//         $data = ['one', 'two', 'three', 'four', 'five'];
+//         return view('hello.index', ['data'=>$data]);
+//     }
+// };
+
+
+// page.97
 class HelloController extends Controller
 {
-    public function index($id='zero') 
-{
+    public function index()
+    {
         $data = [
-            'msg'=>'これはコントローラから渡されたメッセージです。',
-            'id'=>$id
+            ['name'=>'山田たろう', 'mail'=>'taro@yamada'],
+            ['name'=>'田中はなこ', 'mail'=>'hanako@flower'],
+            ['name'=>'鈴木さちこ', 'mail'=>'sachiko@happy'],
         ];
-        return view('hello.index', $data);
+        return view('hello.index', ['data'=>$data]);
+    }
 }
-};
