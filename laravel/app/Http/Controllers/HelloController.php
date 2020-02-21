@@ -142,7 +142,7 @@ use Illuminate\Http\Request;
 // page.62 blade
 // class HelloController extends Controller
 // {
-//     public function index($id='zero') 
+//     public function index($id='zero')
 // {
 //         $data = [
 //             'msg'=>'これはコントローラから渡されたメッセージです。',
@@ -156,7 +156,7 @@ use Illuminate\Http\Request;
 // page.65~ blade
 // class HelloController extends Controller
 // {
-//     public function index(Request $request) 
+//     public function index(Request $request)
 // {
 //         $data = [
 //             'msg'=>'これはコントローラから渡されたメッセージです。',
@@ -170,7 +170,7 @@ use Illuminate\Http\Request;
 // page.68 blade
 // class HelloController extends Controller
 // {
-//     public function index() 
+//     public function index()
 // {
 //         $data = [
 //             'msg'=>'これはBladeを利用したサンプルです。',
@@ -183,14 +183,14 @@ use Illuminate\Http\Request;
 // page.69
 // class HelloController extends Controller
 // {
-//     public function index() 
+//     public function index()
 //     {
 //         $data = [
 //             'msg'=>'お名前を入力してください。',
 //         ];
 //         return view('hello.index', $data);
 //     }
-//     public function post(Request $request) 
+//     public function post(Request $request)
 //     {
 //         $msg = $request->msg;
 //         $data = [
@@ -204,11 +204,11 @@ use Illuminate\Http\Request;
 // page.76 if
 // class HelloController extends Controller
 // {
-//     public function index() 
+//     public function index()
 //     {
 //         return view('hello.index', ['msg'=>'']);
 //     }
-//     public function post(Request $request) 
+//     public function post(Request $request)
 //     {
 //         return view('hello.index', ['msg'=>$request->msg]);
 //     }
@@ -218,11 +218,11 @@ use Illuminate\Http\Request;
 // paage.77 isset
 // class HelloController extends Controller
 // {
-//     public function index() 
+//     public function index()
 //     {
 //         return view('hello.index');
 //     }
-//     public function post(Request $request) 
+//     public function post(Request $request)
 //     {
 //         return view('hello.index', ['msg'=>$request->msg]);
 //     }
@@ -232,7 +232,7 @@ use Illuminate\Http\Request;
 // page.80 ループ処理
 // class HelloController extends Controller
 // {
-//     public function index() 
+//     public function index()
 //     {
 //         $data = ['one', 'two', 'three', 'four', 'five'];
 //         return view('hello.index', ['data'=>$data]);
